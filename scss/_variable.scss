@@ -1,0 +1,28 @@
+// ==============================================
+// break point
+// ==============================================
+// いままでの指定
+$mq-xs: '(max-width: 480px)';
+$mq-sm: '(min-width: 600px)';
+$mq-md: '(min-width: 960px)';
+$mq-lg: '(min-width: 1240px)';
+
+// 新しい指定
+$nmq-xs: '(width < 480px)';
+$nmq-sm: '(600px <= width)';
+$nmq-md: '(960px <= width)';
+$nmq-lg: '(1240px <= width)';
+
+// ==============================================
+// ブラウザ16px基準のフォントサイズ（rem）計算
+// ==============================================
+@mixin font-rem($size) {
+  font-size: $size + px;
+  font-size: ($size / 16) + rem;
+}
+
+// ==============================================
+// color mode
+// ==============================================
+$mode-dark: '(prefers-color-scheme: dark)';
+$mode-light: '(prefers-color-scheme: light)';

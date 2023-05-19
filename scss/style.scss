@@ -1,0 +1,252 @@
+@use "./variable" as *;
+/* ===============================================
+# theme
+=============================================== */
+html {
+  background-color: #DCFEA0;
+  color: #1D13B2;
+  font-weight: 500;
+  border-color: #1D13B2;
+
+  // ダークモード
+  &.darkmode {
+    background-color: #1D13B2;
+    color: #DCFEA0;
+    font-weight: 500;
+    border-color: #DCFEA0;
+  }
+}
+
+/* ===============================================
+# common
+=============================================== */
+body {
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// 見出し
+.el-head {
+  @include font-rem(20);
+  font-weight: 800;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+
+  @media #{$mq-sm} {
+    @include font-rem(24);
+  }
+}
+
+.el-subhead {
+  font-weight: 800;
+  position: relative;
+
+  @media #{$mq-sm} {
+    @include font-rem(18);
+    margin-bottom: 5px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    margin-left: 5px;
+    display: inline-block;
+    content: '';
+    height: 1px;
+    width: 3em;
+    border-top: 1px solid;
+  }
+}
+
+// section
+.ly-section {
+  margin-inline: 15px;
+  margin-top: 40px;
+}
+
+// wrap
+.ly-wrap {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* ===============================================
+# .bl-profile
+=============================================== */
+// 全体レイアウト
+.bl-profile {
+  display: grid;
+  gap: 10px;
+
+  @media #{$mq-sm} {
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+// 装飾
+.bl-profile {
+  text-align: center;
+  line-height: 1.5;
+
+  @media #{$mq-sm} {
+    text-align: left;
+  }
+
+  .face-img {
+    display: inline-block;
+    width: 160px;
+    border-radius: 100%;
+  }
+
+  .name {
+    @include font-rem(24);
+    font-weight: 800;
+  }
+
+  .txt {
+    margin-top: 10px;
+  }
+}
+
+/* ===============================================
+# .bl-sns
+=============================================== */
+.bl-sns {
+  margin-top: 10px;
+
+  @media #{$mq-sm} {
+    margin-top: 20px;
+  }
+}
+
+.sns-list,
+.shop-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  a {
+    font-size: 0;
+  }
+}
+
+.shop-list {
+  margin-top: 10px;
+}
+
+.sns-list-item {
+  a {
+    display: inline-block;
+    width: 16vw;
+    height: 16vw;
+
+    background-repeat: no-repeat;
+    background-position: top 50% left 50%;
+    background-size: contain;
+
+    @media #{$mq-sm} {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .hatena {
+    background-image: url('../images/sns-icon/hatenablog-normal.svg');
+  }
+
+  .twitter {
+    background-image: url('../images/sns-icon/twitter.svg');
+  }
+
+  .tumblr {
+    background-image: url('../images/sns-icon/tumblr.svg');
+  }
+
+  .youtube {
+    background-image: url('../images/sns-icon/youtube.svg');
+  }
+}
+
+// ダークモードのアイコン
+.darkmode {
+  .sns-list-item {
+    .hatena {
+      background-image: url('../images/sns-icon/hatenablog-white.svg');
+    }
+  }
+}
+
+.shop-list-item {
+
+  a {
+    display: inline-block;
+    width: 40vw;
+    height: 50px;
+
+    background-repeat: no-repeat;
+    background-position: top 50% left 50%;
+    background-size: contain;
+
+    @media #{$mq-sm} {
+      width: 180px;
+      height: 50px;
+    }
+  }
+
+  .txt {
+    margin-top: 5px;
+    text-align: center;
+    @include font-rem(12);
+  }
+
+  .suzuri {
+    background-image: url('../images/sns-icon/suzuri-normal.svg');
+  }
+
+  .booth {
+    background-image: url('../images/sns-icon/booth.svg');
+  }
+}
+
+// ダークモードのアイコン
+.darkmode {
+  .shop-list-item {
+    .suzuri {
+      background-image: url('../images/sns-icon/suzuri-white.svg');
+    }
+  }
+}
+
+/* ===============================================
+# .bl-about
+=============================================== */
+.bl-about {
+  display: grid;
+  gap: 1.5em 10px;
+  grid-template-columns: 1fr 1fr;
+
+  .about-item:nth-child(1) {
+    grid-column: 1/3;
+  } 
+}
+
+/* ===============================================
+# .bl-request
+=============================================== */
+.bl-request {}

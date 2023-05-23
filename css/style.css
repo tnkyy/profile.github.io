@@ -3,16 +3,16 @@
 =============================================== */
 html {
   font-weight: 500;
-  color: #1D13B2;
-  background-color: #DCFEA0;
-  border-color: #1D13B2;
+  color: #0808AB;
+  background-color: #D7EC50;
+  border-color: #0808AB;
 }
 
 html.darkmode {
   font-weight: 500;
-  color: #DCFEA0;
-  background-color: #1D13B2;
-  border-color: #DCFEA0;
+  color: #D7EC50;
+  background-color: #0808AB;
+  border-color: #D7EC50;
 }
 
 /* ===============================================
@@ -115,6 +115,7 @@ a:hover {
 .bl-profile .face-img {
   display: inline-block;
   width: 160px;
+  border: 5px solid white;
   border-radius: 100%;
 }
 
@@ -245,3 +246,69 @@ a:hover {
 /* ===============================================
 # .bl-request
 =============================================== */
+
+/* ===============================================
+# .onoffswitch
+=============================================== */
+.onoffswitch {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+@media (min-width: 600px) {
+  .onoffswitch {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.onoffswitch input[type="checkbox"] {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.onoffswitch-label .title {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.onoffswitch-label .button {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 22px;
+  background-color: white;
+  border-radius: 100px;
+  transition: all 0.4s;
+  transition: 0.3s ease all;
+}
+
+.onoffswitch-label .button::before {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  content: "";
+  background-color: #0808AB;
+  border-radius: 100%;
+  transition: 0.3s ease all;
+  transform: translateY(-50%);
+}
+
+.darkmode .onoffswitch-label .button {
+  background-color: #ddd;
+  transition: 0.3s ease all;
+}
+
+.darkmode .onoffswitch-label .button::before {
+  left: calc(100% - 19px);
+  transition: 0.3s ease all;
+}

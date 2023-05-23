@@ -14,11 +14,11 @@ modeSwitch.addEventListener("change", () => {
   if (modeSwitch.checked) {
     darkModeOn();
     sessionStorage.setItem("darkMode", "on");
-    title.textContent = 'ON';
+    title.textContent = 'DARK';
   } else {
     darkModeOff();
     sessionStorage.setItem("darkMode", "off");
-    title.textContent = 'OFF';
+    title.textContent = 'LIGHT';
   }
 });
 
@@ -38,13 +38,13 @@ const osDark = window.matchMedia("(prefers-color-scheme: dark)");
 function darkModeOn() {
   document.documentElement.classList.add("darkmode"); // ルート要素<html>にクラスを追加
   modeSwitch.checked = true;
-  title.textContent = 'ON';
+  title.textContent = 'DARK';
 }
 // ダークモードがオフの時に実行する処理
 function darkModeOff() {
   document.documentElement.classList.remove("darkmode"); // クラスの削除
   modeSwitch.checked = false;
-  title.textContent = 'OFF';
+  title.textContent = 'LIGHT';
 }
 
 // イベントリスナー

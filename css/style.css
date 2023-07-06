@@ -43,7 +43,7 @@ a:hover {
   border-bottom: 1px solid;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .el-head {
     font-size: 24px;
     font-size: 1.5rem;
@@ -55,7 +55,7 @@ a:hover {
   font-weight: 800;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .el-subhead {
     margin-bottom: 5px;
     font-size: 18px;
@@ -92,12 +92,16 @@ a:hover {
   gap: 10px;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .bl-profile {
     grid-template-columns: max-content max-content;
     gap: 2rem;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -106,7 +110,7 @@ a:hover {
   text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .bl-profile {
     text-align: left;
   }
@@ -133,10 +137,11 @@ a:hover {
 # .bl-sns
 =============================================== */
 .bl-sns {
+  margin-inline: 15px;
   margin-top: 10px;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .bl-sns {
     margin-top: 20px;
   }
@@ -144,10 +149,14 @@ a:hover {
 
 .sns-list,
 .shop-list {
+  display: -webkit-box;
+  display: flexbox;
   display: flex;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .sns-list a,
@@ -161,14 +170,14 @@ a:hover {
 
 .sns-list-item a {
   display: inline-block;
-  width: 16vw;
-  height: 16vw;
+  width: 13vw;
+  height: 13vw;
   background-repeat: no-repeat;
   background-position: top 50% left 50%;
   background-size: contain;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .sns-list-item a {
     width: 60px;
     height: 60px;
@@ -177,6 +186,10 @@ a:hover {
 
 .sns-list-item .hatena {
   background-image: url("../images/sns-icon/hatenablog-normal.svg");
+}
+
+.sns-list-item .mastodon {
+  background-image: url("../images/sns-icon/mastodon-black.svg");
 }
 
 .sns-list-item .twitter {
@@ -195,6 +208,10 @@ a:hover {
   background-image: url("../images/sns-icon/hatenablog-white.svg");
 }
 
+.darkmode .sns-list-item .mastodon {
+  background-image: url("../images/sns-icon/mastodon-white.svg");
+}
+
 .shop-list-item a {
   display: inline-block;
   width: 40vw;
@@ -204,7 +221,7 @@ a:hover {
   background-size: contain;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .shop-list-item a {
     width: 180px;
     height: 50px;
@@ -256,7 +273,7 @@ a:hover {
   right: 10px;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .onoffswitch {
     top: 20px;
     right: 20px;
@@ -268,9 +285,15 @@ a:hover {
 }
 
 .onoffswitch-label {
+  display: -webkit-box;
+  display: flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .onoffswitch-label .title {
@@ -285,6 +308,7 @@ a:hover {
   height: 22px;
   background-color: white;
   border-radius: 100px;
+  transition: 0.3s ease all;
   transition: all 0.4s;
   transition: 0.3s ease all;
 }
@@ -300,7 +324,7 @@ a:hover {
   background-color: #0808AB;
   border-radius: 100%;
   transition: 0.3s ease all;
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .darkmode .onoffswitch-label .button {

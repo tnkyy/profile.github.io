@@ -180,7 +180,8 @@ a {
   }
 
   .twitter {
-    background-image: url('../images/sns-icon/twitter.svg');
+    background-image: url('../images/sns-icon/x-black.svg');
+    background-size: 80%;
   }
 
   .tumblr {
@@ -201,6 +202,10 @@ a {
 
     .mastodon {
       background-image: url('../images/sns-icon/mastodon-white.svg');
+    }
+
+    .twitter {
+      background-image: url('../images/sns-icon/x-white.svg');
     }
   }
 }

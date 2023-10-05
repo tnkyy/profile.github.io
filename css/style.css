@@ -7,7 +7,6 @@ html {
   background-color: #D7EC50;
   border-color: #0808AB;
 }
-
 html.darkmode {
   font-weight: 500;
   color: #D7EC50;
@@ -28,22 +27,20 @@ body {
 a {
   color: inherit;
 }
-
 a:hover {
   text-decoration: none;
 }
 
 .el-head {
-  padding-bottom: 5px;
-  margin-bottom: 10px;
   font-size: 20px;
   font-size: 1.25rem;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: 800;
   text-align: center;
   border-bottom: 1px solid;
 }
-
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .el-head {
     font-size: 24px;
     font-size: 1.5rem;
@@ -54,15 +51,13 @@ a:hover {
   position: relative;
   font-weight: 800;
 }
-
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .el-subhead {
-    margin-bottom: 5px;
     font-size: 18px;
     font-size: 1.125rem;
+    margin-bottom: 5px;
   }
 }
-
 .el-subhead::after {
   position: absolute;
   top: 50%;
@@ -91,9 +86,9 @@ a:hover {
   display: grid;
   gap: 10px;
 }
-
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .bl-profile {
+    grid-template-columns: -webkit-max-content -webkit-max-content;
     grid-template-columns: max-content max-content;
     gap: 2rem;
     -webkit-box-align: center;
@@ -109,26 +104,22 @@ a:hover {
   line-height: 1.5;
   text-align: center;
 }
-
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .bl-profile {
     text-align: left;
   }
 }
-
 .bl-profile .face-img {
   display: inline-block;
   width: 160px;
   border: 5px solid white;
   border-radius: 100%;
 }
-
 .bl-profile .name {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 800;
 }
-
 .bl-profile .txt {
   margin-top: 10px;
 }
@@ -140,8 +131,7 @@ a:hover {
   margin-inline: 15px;
   margin-top: 10px;
 }
-
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .bl-sns {
     margin-top: 20px;
   }
@@ -150,15 +140,15 @@ a:hover {
 .sns-list,
 .shop-list {
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .sns-list a,
 .shop-list a {
   font-size: 0;
@@ -176,30 +166,25 @@ a:hover {
   background-position: top 50% left 50%;
   background-size: contain;
 }
-
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .sns-list-item a {
     width: 60px;
     height: 60px;
   }
 }
-
 .sns-list-item .hatena {
   background-image: url("../images/sns-icon/hatenablog-normal.svg");
 }
-
 .sns-list-item .mastodon {
   background-image: url("../images/sns-icon/mastodon-black.svg");
 }
-
 .sns-list-item .twitter {
-  background-image: url("../images/sns-icon/twitter.svg");
+  background-image: url("../images/sns-icon/x-black.svg");
+  background-size: 80%;
 }
-
 .sns-list-item .tumblr {
   background-image: url("../images/sns-icon/tumblr.svg");
 }
-
 .sns-list-item .youtube {
   background-image: url("../images/sns-icon/youtube.svg");
 }
@@ -207,9 +192,11 @@ a:hover {
 .darkmode .sns-list-item .hatena {
   background-image: url("../images/sns-icon/hatenablog-white.svg");
 }
-
 .darkmode .sns-list-item .mastodon {
   background-image: url("../images/sns-icon/mastodon-white.svg");
+}
+.darkmode .sns-list-item .twitter {
+  background-image: url("../images/sns-icon/x-white.svg");
 }
 
 .shop-list-item a {
@@ -220,25 +207,21 @@ a:hover {
   background-position: top 50% left 50%;
   background-size: contain;
 }
-
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .shop-list-item a {
     width: 180px;
     height: 50px;
   }
 }
-
 .shop-list-item .txt {
   margin-top: 5px;
+  text-align: center;
   font-size: 12px;
   font-size: 0.75rem;
-  text-align: center;
 }
-
 .shop-list-item .suzuri {
   background-image: url("../images/sns-icon/suzuri-normal.svg");
 }
-
 .shop-list-item .booth {
   background-image: url("../images/sns-icon/booth.svg");
 }
@@ -255,7 +238,6 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 1.5em 10px;
 }
-
 .bl-about .about-item:nth-child(1) {
   grid-column: 1/3;
 }
@@ -263,7 +245,6 @@ a:hover {
 /* ===============================================
 # .bl-request
 =============================================== */
-
 /* ===============================================
 # .onoffswitch
 =============================================== */
@@ -272,35 +253,32 @@ a:hover {
   top: 10px;
   right: 10px;
 }
-
-@media (width >= 600px) {
+@media (min-width: 600px) {
   .onoffswitch {
     top: 20px;
     right: 20px;
   }
 }
-
-.onoffswitch input[type="checkbox"] {
+.onoffswitch input[type=checkbox] {
   display: none;
 }
 
 .onoffswitch-label {
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+      -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-
 .onoffswitch-label .title {
   font-size: 12px;
   font-size: 0.75rem;
 }
-
 .onoffswitch-label .button {
   position: relative;
   display: block;
@@ -308,11 +286,11 @@ a:hover {
   height: 22px;
   background-color: white;
   border-radius: 100px;
-  transition: 0.3s ease all;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
-
 .onoffswitch-label .button::before {
   position: absolute;
   top: 50%;
@@ -323,16 +301,19 @@ a:hover {
   content: "";
   background-color: #0808AB;
   border-radius: 100%;
+  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
+  -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 .darkmode .onoffswitch-label .button {
   background-color: #ddd;
+  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
-
 .darkmode .onoffswitch-label .button::before {
   left: calc(100% - 19px);
+  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }

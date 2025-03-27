@@ -191,6 +191,10 @@ a {
   .youtube {
     background-image: url('../images/sns-icon/youtube.svg');
   }
+
+  .bluesky {
+    background-image: url('../images/sns-icon/bluesky-black.svg');
+  }
 }
 
 // ダークモードのアイコン
@@ -206,6 +210,10 @@ a {
 
     .twitter {
       background-image: url('../images/sns-icon/x-white.svg');
+    }
+
+    .bluesky {
+      background-image: url('../images/sns-icon/bluesky-white.svg');
     }
   }
 }

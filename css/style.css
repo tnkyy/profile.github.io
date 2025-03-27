@@ -88,15 +88,10 @@ a:hover {
 }
 @media (min-width: 600px) {
   .bl-profile {
-    grid-template-columns: -webkit-max-content -webkit-max-content;
     grid-template-columns: max-content max-content;
     gap: 2rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -139,15 +134,10 @@ a:hover {
 
 .sns-list,
 .shop-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .sns-list a,
 .shop-list a {
@@ -188,6 +178,9 @@ a:hover {
 .sns-list-item .youtube {
   background-image: url("../images/sns-icon/youtube.svg");
 }
+.sns-list-item .bluesky {
+  background-image: url("../images/sns-icon/bluesky-black.svg");
+}
 
 .darkmode .sns-list-item .hatena {
   background-image: url("../images/sns-icon/hatenablog-white.svg");
@@ -197,6 +190,9 @@ a:hover {
 }
 .darkmode .sns-list-item .twitter {
   background-image: url("../images/sns-icon/x-white.svg");
+}
+.darkmode .sns-list-item .bluesky {
+  background-image: url("../images/sns-icon/bluesky-white.svg");
 }
 
 .shop-list-item a {
@@ -264,16 +260,9 @@ a:hover {
 }
 
 .onoffswitch-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .onoffswitch-label .title {
   font-size: 12px;
@@ -286,9 +275,7 @@ a:hover {
   height: 22px;
   background-color: white;
   border-radius: 100px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
 .onoffswitch-label .button::before {
@@ -301,19 +288,15 @@ a:hover {
   content: "";
   background-color: #0808AB;
   border-radius: 100%;
-  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .darkmode .onoffswitch-label .button {
   background-color: #ddd;
-  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
 .darkmode .onoffswitch-label .button::before {
   left: calc(100% - 19px);
-  -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
-}
+}/*# sourceMappingURL=style.css.map */
